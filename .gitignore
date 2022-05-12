@@ -1,0 +1,4 @@
+credentials.json
+*.py[cod]
+charta/__pycache__/views.cpython-39.pyc
+propagatio/__pycache__/settings.cpython-39.pyc

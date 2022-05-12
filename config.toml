@@ -1,0 +1,297 @@
+[common]
+# ==> NOTE: Replace with google spreadsheet id of stat file url
+# Example: https://docs.google.com/spreadsheets/d/1pV-L2fj8nOwhK1XHNsPSqvC4OsV9HAUEyQA4Cr3U_0s/edit#gid=587257807
+# (Get the part after /d/ but before /edit)
+spreadsheetId = "1pV-L2fj8nOwhK1XHNsPSqvC4OsV9HAUEyQA4Cr3U_0s"
+# ==> NOTE: Replace with current month
+month = 5
+# Name of Column contains structure name
+structureNameCol = "A"
+# Name of Column contains leader name of structure
+leaderNameCol = "B"
+# Name of summary sheet
+summarySheetName = "สรุป"
+# List of range of column name that contains data in each week 
+weekRange = ["C:M", "O:Y", "AA:AK", "AM:AW", "AY:BI"]
+# List of data name in range (order from left to right)
+metricColList = ["CH", "S", "BT", "ATP", "C", "On", "PC", "ผจ.", "ผส.", "ผก.", "Care"]
+# Name of sheet to get followUp count for each week
+followUpSheetNameList = ["Wk1", "Wk2", "Wk3", "Wk4", "Wk5"]
+# List of column name that contains data in each row 
+followUpDataColumnList = ["X", "AO", "BC", "BQ", "CD", "CP", "DB", "DN", "DZ", "EL"]
+# column name that contains data for leader follow up
+leaderFollowUpDataColumn = "X"
+
+# Metric of data and how to compute them
+# Exclude 1:1 and Target since they have specific method to obtain the data
+[metrics]
+SBAC = "S + BT + ATP + C"
+SBACON = "S + BT + ATP + C + On"
+Care = "Care"
+"ผจ." = "ผจ."
+"ผส." = "ผส."
+
+# ==> NOTE: Replace with this month target for each structure
+
+[structure.UN1]
+type = "RP"
+target = 130
+summaryRow = 8
+followUpRow = 40
+
+[structure.RinOne]
+type = "SDL"
+target = 28
+summaryRow = 4
+followUpRow = 9
+dependencies = ["Eternal_Love"]
+
+[structure.Eternal_Love]
+type = "UL"
+target = 27
+summaryRow = 16
+dependencies = ["BSRU", "Balance", "Superior", "Promise"]
+
+[structure.BSRU]
+type = "CL"
+target = 7
+summaryRow = 12
+followUpRow = 4
+
+[structure.Balance]
+type = "CL"
+target = 7
+summaryRow = 13
+followUpRow = 5
+
+[structure.Superior]
+type = "CL"
+target = 5
+summaryRow = 14
+followUpRow = 6
+
+[structure.Promise]
+type = "CL"
+target = 7
+summaryRow = 15
+followUpRow = 7
+
+###################
+
+[structure.Spirit]
+type = "SDL"
+target = 27
+summaryRow = 5
+followUpRow = 17
+dependencies = ["KT"]
+
+[structure.KT]
+type = "UL"
+target = 26
+summaryRow = 27
+dependencies = ["Shema", "Shalom", "Harmony"]
+
+[structure.Shalom]
+type = "CL"
+target = 12
+summaryRow = 24
+followUpRow = 13
+
+[structure.Shema]
+type = "CL"
+target = 6
+summaryRow = 25
+followUpRow = 14
+
+[structure.Harmony]
+type = "CL"
+target = 8
+summaryRow = 26
+followUpRow = 15
+
+###################
+
+[structure.KL]
+type = "SDL"
+target = 28
+summaryRow = 6
+followUpRow = 25
+dependencies = ["Honest"]
+
+[structure.Honest]
+type = "UL"
+target = 27
+summaryRow = 38
+dependencies = ["Young_lnw", "Obey", "Excellent"]
+
+[structure.Young_lnw]
+type = "CL"
+target = 12
+summaryRow = 35
+followUpRow = 21
+
+[structure.Obey]
+type = "CL"
+target = 7
+summaryRow = 36
+followUpRow = 22
+
+[structure.Excellent]
+type = "CL"
+target = 7
+summaryRow = 37
+followUpRow = 23
+
+###################
+
+[structure.KN]
+type = "SDL"
+target = 46
+summaryRow = 7
+followUpRow = 36
+dependencies = ["Skill", "Navigator"]
+
+[structure.Skill]
+type = "UL"
+target = 18
+summaryRow = 48
+dependencies = ["Mighty", "Fairly"]
+
+[structure.Mighty]
+type = "CL"
+target = 9
+summaryRow = 46
+followUpRow = 29
+
+[structure.Fairly]
+type = "CL"
+target = 8
+summaryRow = 47
+followUpRow = 30
+
+[structure.Navigator]
+type = "UL"
+target = 28
+summaryRow = 53
+dependencies = ["Nirvana", "Niceness", "New_Life_Full", "Joshua"]
+
+[structure.Nirvana]
+type = "CL"
+target = 8
+summaryRow = 49
+followUpRow = 31
+
+[structure.Niceness]
+type = "CL"
+target = 7
+summaryRow = 50
+followUpRow = 32
+
+[structure.New_Life_Full]
+type = "CL"
+target = 6
+summaryRow = 51
+followUpRow = 33
+
+[structure.Joshua]
+type = "CL"
+target = 6
+summaryRow = 52
+followUpRow = 34
+
+
+
+
+
+# [target]
+# RinOne = 1
+# Spirit = 1
+# KL = 1
+# KN = 1
+# BSRU = 1
+# Balance = 1
+# Superior = 1
+# Promise = 1
+# Eternal_Love = 1
+# Shalom = 1
+# Shema = 1
+# Harmony = 1
+# KT = 1
+# Young_lnw = 1
+# Obey = 1
+# Excellent = 1
+# Honest = 1
+# Mighty = 1
+# Fairly = 1
+# Skill = 1
+# Nirvana = 1
+# Niceness = 1
+# New_Life_Full = 1
+# Joshua = 1
+# Navigator = 1
+
+# # Row of the data of a structure in summary sheet
+# [structure_data_row]
+# RinOne = 4          # SDL
+# Spirit = 5          # SDL
+# KL = 6              # SDL
+# KN = 7              # SDL
+# BSRU = 12           # CL
+# Balance = 13        # CL
+# Superior = 14       # CL
+# Promise = 15        # CL
+# Eternal_Love = 16   # UL
+# Shalom = 24         # CL
+# Shema = 25          # CL
+# Harmony = 26        # CL
+# KT = 27             # UL
+# Young_lnw = 35      # CL
+# Obey = 36           # CL
+# Excellent = 37      # CL
+# Honest = 38         # UL
+# Mighty = 46         # CL
+# Fairly = 47         # CL
+# Skill = 48          # UL
+# Nirvana = 49        # CL
+# Niceness = 50       # CL
+# New_Life_Full = 51  # CL
+# Joshua = 52         # CL
+# Navigator = 53      # UL
+
+
+
+
+
+
+
+
+# BSRU = 4           # CL
+# Balance = 5        # CL
+# Superior = 6       # CL
+# Promise = 7        # CL
+# Eternal_Love =    # UL
+# RinOne =           # SDL
+
+# Shalom = 13         # CL
+# Shema = 14          # CL
+# Harmony = 15        # CL
+# KT =              # UL
+# Spirit =           # SDL
+
+# Young_lnw = 21      # CL
+# Obey = 22           # CL
+# Excellent = 23      # CL
+# Honest =          # UL
+# KL =               # SDL
+
+# Mighty = 29         # CL
+# Fairly = 30         # CL
+# Skill =           # UL
+# Nirvana = 31        # CL
+# Niceness = 32       # CL
+# New_Life_Full = 33  # CL
+# Joshua = 34         # CL
+# Navigator =       # UL
+# KN =               # SDL
+
+# UN1 = 40
