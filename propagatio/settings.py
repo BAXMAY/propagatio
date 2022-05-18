@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-     'https://ductus.onrender.com/'
+     'https://ductus.onrender.com'
 ]
 
 ROOT_URLCONF = 'propagatio.urls'
