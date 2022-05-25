@@ -1,3 +1,4 @@
+from calendar import month
 from django.shortcuts import render
 
 import os
@@ -21,11 +22,33 @@ def index(request):
 
         num_week = int(request.POST.get('num_week'))
 
+        month = int(request.POST.get('month'))
+
+        year = int(request.POST.get('year'))
+
         # call function
         outputDict = export_spreadsheet(num_week)
 
-        data = supabase.table("nivo_data").update({"jsonString": outputDict}).eq("id", 1).execute()
-        assert len(data.data) > 0
+        updateDict = {
+            "jsonString": outputDict,
+            "month": month,
+            "year": year
+        }
+
+        #   Check if data of month year is already in table
+        data = supabase.table("nivo_data").select("id").eq("year", year).eq("month", month).limit(1).execute()
+
+        newData = None
+
+        #   Update if exist
+        if len(data.data) > 0:
+            newData = supabase.table("nivo_data").update(updateDict).eq("id", data.data[0]['id']).execute()
+        #   Insert if not exist
+        else:
+            newData = supabase.table("nivo_data").insert(updateDict).execute()
+
+        assert newData != None
+        assert len(newData.data) > 0
 
         # return user to required page
         return render(request, 'charta/index.html', {'output': outputDict})
@@ -34,7 +57,7 @@ def fetchTableData(request):
     '''
     '''
 
-    data = supabase.table("nivo_data").select("jsonString").eq('id', 1).execute()
+    data = supabase.table("nivo_data").select("jsonString").eq('year', 2022).eq('month', 5).execute()
     assert len(data.data) > 0
 
     tableData = json.loads(data.data[0]['jsonString'])
