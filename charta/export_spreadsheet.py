@@ -38,7 +38,8 @@ from optparse import OptionParser
 REQUIRED_ARGUMENT_NUM = 0
 CREDENTIAL_FILE_PATH = 'credentials.json'
 CONFIG_FILE_PATH = 'config.toml'
-SPREADSHEET_ID = '1pV-L2fj8nOwhK1XHNsPSqvC4OsV9HAUEyQA4Cr3U_0s'
+# NOTE: Email: mamamia-spread@stat-spreadsheet.iam.gserviceaccount.com
+SPREADSHEET_ID = '1zUPQX8APagHFe6RPTi0TyPfKOPVdO3Jp1Q98R050zAc'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 log = logging.getLogger(__name__)
