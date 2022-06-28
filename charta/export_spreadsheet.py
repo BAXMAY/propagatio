@@ -84,7 +84,7 @@ def getAllSundayInMonth(month: int):
   # print( 'Sundays:', sundayList )
   return sundayList
 
-def export_spreadsheet(num_week, spreadsheet_id=SPREADSHEET_ID, credential_file_path=CREDENTIAL_FILE_PATH, config_file_path=CONFIG_FILE_PATH):
+def export_spreadsheet(num_week, month=None, spreadsheet_id=SPREADSHEET_ID, credential_file_path=CREDENTIAL_FILE_PATH, config_file_path=CONFIG_FILE_PATH):
   # Read config file
   configDict = toml.load(config_file_path)
 
@@ -92,7 +92,7 @@ def export_spreadsheet(num_week, spreadsheet_id=SPREADSHEET_ID, credential_file_
   sheetSettingDict = configDict['common']
   outputMetricDict = configDict['metrics']
   structureDict = configDict['structure']
-  month: int = sheetSettingDict['month']
+  month: int = month if month != None else sheetSettingDict['month']
 
   summarySheetName = sheetSettingDict['summarySheetName']
   # structureNameCol = sheetSettingDict['structureNameCol']

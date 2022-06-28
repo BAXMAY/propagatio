@@ -27,7 +27,7 @@ def index(request):
         year = int(request.POST.get('year'))
 
         # call function
-        outputDict = export_spreadsheet(num_week)
+        outputDict = export_spreadsheet(num_week, month)
 
         updateDict = {
             "jsonString": outputDict,
