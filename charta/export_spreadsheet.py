@@ -39,7 +39,7 @@ REQUIRED_ARGUMENT_NUM = 0
 CREDENTIAL_FILE_PATH = 'credentials.json'
 CONFIG_FILE_PATH = 'config.toml'
 # NOTE: Email: mamamia-spread@stat-spreadsheet.iam.gserviceaccount.com
-SPREADSHEET_ID = '1zUPQX8APagHFe6RPTi0TyPfKOPVdO3Jp1Q98R050zAc'
+SPREADSHEET_ID = '1FemovUJxuaCvxuxloWi7uzoKDdEQTkSRmMehZmUM9gI'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 log = logging.getLogger(__name__)
