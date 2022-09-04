@@ -16,7 +16,7 @@ weekRange = ["C:M", "O:Y", "AA:AK", "AM:AW", "AY:BI"]
 # List of data name in range (order from left to right)
 metricColList = ["CH", "S", "BT", "ATP", "C", "On", "PC", "ผจ.", "ผส.", "ผก.", "Care"]
 # Name of sheet to get followUp count for each week
-followUpSheetNameList = ["Wk1", "Wk2", "Wk3", "Wk4", "Wk5"]
+followUpSheetNameList = ["Data_Wk1", "Data_Wk2", "Data_Wk3", "Data_Wk4", "Data_Wk5"]
 # List of column name that contains data in each row 
 followUpDataColumnList = ["X", "AO", "BC", "BQ", "CD", "CP", "DB", "DN", "DZ", "EL"]
 # column name that contains data for leader follow up
