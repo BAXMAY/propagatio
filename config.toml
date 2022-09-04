@@ -2,7 +2,7 @@
 # ==> NOTE: Replace with google spreadsheet id of stat file url
 # Example: https://docs.google.com/spreadsheets/d/1pV-L2fj8nOwhK1XHNsPSqvC4OsV9HAUEyQA4Cr3U_0s/edit#gid=587257807
 # (Get the part after /d/ but before /edit)
-spreadsheetId = "1pV-L2fj8nOwhK1XHNsPSqvC4OsV9HAUEyQA4Cr3U_0s"
+spreadsheetId = "1PVGB91CD-82Lhv2bNah6NrujkxbgWiCutN0SK7gBl3E"
 # ==> NOTE: Replace with current month
 month = 5
 # Name of Column contains structure name
@@ -50,9 +50,9 @@ dependencies = ["Eternal_Love"]
 type = "UL"
 target = 27
 summaryRow = 16
-dependencies = ["BSRU", "Balance", "Superior", "Promise"]
+dependencies = ["DBU", "Balance", "Superior", "Promise"]
 
-[structure.BSRU]
+[structure.DBU]
 type = "CL"
 target = 7
 summaryRow = 12
@@ -149,47 +149,47 @@ type = "SDL"
 target = 46
 summaryRow = 7
 followUpRow = 36
-dependencies = ["Skill", "Navigator"]
-
-[structure.Skill]
-type = "UL"
-target = 18
-summaryRow = 48
-dependencies = ["Mighty", "Fairly"]
+dependencies = ["Mighty", "Navigator"]
 
 [structure.Mighty]
+type = "UL"
+target = 18
+summaryRow = 49
+dependencies = ["Godfrey", "Amity", "Galaxy"]
+
+[structure.Godfrey]
 type = "CL"
 target = 9
 summaryRow = 46
 followUpRow = 29
 
-[structure.Fairly]
+[structure.Amity]
 type = "CL"
 target = 8
 summaryRow = 47
 followUpRow = 30
 
+[structure.Galaxy]
+type = "CL"
+target = 8
+summaryRow = 48
+followUpRow = 31
+
 [structure.Navigator]
 type = "UL"
 target = 28
 summaryRow = 53
-dependencies = ["Nirvana", "Niceness", "New_Life_Full", "Joshua"]
+dependencies = ["Natia", "Esther", "Joshua"]
 
-[structure.Nirvana]
+[structure.Natia]
 type = "CL"
 target = 8
-summaryRow = 49
-followUpRow = 31
-
-[structure.Niceness]
-type = "CL"
-target = 7
 summaryRow = 50
 followUpRow = 32
 
-[structure.New_Life_Full]
+[structure.Esther]
 type = "CL"
-target = 6
+target = 7
 summaryRow = 51
 followUpRow = 33
 
