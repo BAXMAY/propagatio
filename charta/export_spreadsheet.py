@@ -146,6 +146,11 @@ def export_spreadsheet(num_week, month=None, spreadsheet_id=SPREADSHEET_ID, cred
         # Use already fetched data
         val = summaryValueListOfList[rowNum][colNum]
 
+        # If no 0 value but only blank string in cell, forcefully set it to zero
+        if ( val == "" ):
+          print(structureName, ': Could not identify number. change str to zerp.')
+          val = 0
+
         # print(f'{rowNum}:{colNum} => {val}')
 
         rawDataDict[structureName].setdefault(metricColList[idx], list())
