@@ -34,13 +34,14 @@
         <div class="col">
             <form method="post">
                 {% csrf_token %}
-                <div class="input-group">
+                <div class="input-group mb-4">
                     <span class="input-group-text">Enter Weeks:</span>
                     <input class="form-control" id="num_week" name="num_week" type="number" value="4"/>
                     <input class="form-control" id="month" name="month" type="number" placeholder="Month(number)"/>
                     <input class="form-control" id="year" name="year" type="number" placeholder="Year(A.D.)"/>
                     <button type="submit" class="btn btn-success" name="run_script">Generate</button>
                 </div>
+                <span><input class="form-control" id="sheet_uid" name="sheet_uid" value="" placeholder="1AYjSij5M2tdzQleQYxvy_WwfXJbqBNOgKqX6LzJjBDI"/></span>
             </form>
         </div>
     </div>

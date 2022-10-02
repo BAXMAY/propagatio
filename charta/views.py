@@ -26,6 +26,15 @@ def index(request):
 
         year = int(request.POST.get('year'))
 
+        sheet_uid = request.POST.get('sheet_uid')
+        
+        if ( sheet_uid != "" ):
+
+            # call function
+            outputDict = export_spreadsheet(num_week, month, spreadsheet_id=sheet_uid)
+
+        else:
+
         # call function
         outputDict = export_spreadsheet(num_week, month)
 
