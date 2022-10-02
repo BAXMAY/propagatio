@@ -35,8 +35,8 @@ def index(request):
 
         else:
 
-        # call function
-        outputDict = export_spreadsheet(num_week, month)
+            # call function
+            outputDict = export_spreadsheet(num_week, month)
 
         updateDict = {
             "jsonString": outputDict,
