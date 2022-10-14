@@ -83,31 +83,13 @@ type = "SDL"
 target = 32
 summaryRow = 5
 followUpRow = 18
-dependencies = ["KT", "Harvest"]
+dependencies = ["KT", "Shalom"]
 
 [structure.KT]
 type = "UL"
 target = 15
 summaryRow = 26
 dependencies = ["Shema", "Harmony"]
-
-[structure.Harvest]
-type = "UL"
-target = 16
-summaryRow = 29
-dependencies = ["Seniority", "Shalom"]
-
-[structure.Seniority]
-type = "CL"
-target = 7
-summaryRow = 27
-followUpRow = 15
-
-[structure.Shalom]
-type = "CL"
-target = 8
-summaryRow = 28
-followUpRow = 16
 
 [structure.Shema]
 type = "CL"
@@ -121,6 +103,24 @@ target = 8
 summaryRow = 25
 followUpRow = 14
 
+[structure.Shalom]
+type = "UL"
+target = 16
+summaryRow = 29
+dependencies = ["Seniority", "Gabriella"]
+
+[structure.Seniority]
+type = "CL"
+target = 7
+summaryRow = 27
+followUpRow = 15
+
+[structure.Gabriella]
+type = "CL"
+target = 8
+summaryRow = 28
+followUpRow = 16
+
 ###################
 
 [structure.KL]
@@ -128,7 +128,7 @@ type = "SDL"
 target = 40
 summaryRow = 6
 followUpRow = 27
-dependencies = ["Honest"]
+dependencies = ["Honest", "KLT"]
 
 [structure.Honest]
 type = "UL"
@@ -136,17 +136,17 @@ target = 14
 summaryRow = 38
 dependencies = ["Young_lnw"]
 
-[structure.KLT]
-type = "UL"
-target = 25
-summaryRow = 42
-dependencies = ["Faithful", "Obey", "Excellent"]
-
 [structure.Young_lnw]
 type = "CL"
 target = 13
 summaryRow = 37
 followUpRow = 22
+
+[structure.KLT]
+type = "UL"
+target = 25
+summaryRow = 42
+dependencies = ["Faithful", "Obey", "Excellent"]
 
 [structure.Faithful]
 type = "CL"
