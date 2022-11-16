@@ -35,44 +35,44 @@ Care = "Care"
 
 [structure.UN1]
 type = "RP"
-target = 153
+target = 200
 summaryRow = 8
-followUpRow = 42
+followUpRow = 43
 
 [structure.RinOne]
 type = "SDL"
-target = 30
+target = 45
 summaryRow = 4
 followUpRow = 9
 dependencies = ["Eternal_Love"]
 
 [structure.Eternal_Love]
 type = "UL"
-target = 29
+target = 44
 summaryRow = 16
 dependencies = ["DBU", "Balance", "Superior", "Promise"]
 
 [structure.DBU]
 type = "CL"
-target = 7
+target = 10
 summaryRow = 12
 followUpRow = 4
 
 [structure.Balance]
 type = "CL"
-target = 7
+target = 10
 summaryRow = 13
 followUpRow = 5
 
 [structure.Superior]
 type = "CL"
-target = 7
+target = 11
 summaryRow = 14
 followUpRow = 6
 
 [structure.Promise]
 type = "CL"
-target = 7
+target = 12
 summaryRow = 15
 followUpRow = 7
 
@@ -80,148 +80,154 @@ followUpRow = 7
 
 [structure.Spirit]
 type = "SDL"
-target = 32
+target = 44
 summaryRow = 5
-followUpRow = 18
+followUpRow = 19
 dependencies = ["KT", "Shalom"]
 
 [structure.KT]
 type = "UL"
-target = 15
-summaryRow = 26
-dependencies = ["Shema", "Harmony"]
+target = 23
+summaryRow = 27
+dependencies = ["Shema", "Harmony", "Testimony"]
 
 [structure.Shema]
 type = "CL"
-target = 7
+target = 9
 summaryRow = 24
 followUpRow = 13
 
 [structure.Harmony]
 type = "CL"
-target = 8
+target = 7
 summaryRow = 25
 followUpRow = 14
 
+[structure.Testimony]
+type = "CL"
+target = 7
+summaryRow = 26
+followUpRow = 15
+
 [structure.Shalom]
 type = "UL"
-target = 16
-summaryRow = 29
+target = 20
+summaryRow = 30
 dependencies = ["Seniority", "Gabriella"]
 
 [structure.Seniority]
 type = "CL"
-target = 7
-summaryRow = 27
-followUpRow = 15
+target = 9
+summaryRow = 28
+followUpRow = 16
 
 [structure.Gabriella]
 type = "CL"
-target = 8
-summaryRow = 28
-followUpRow = 16
+target = 10
+summaryRow = 29
+followUpRow = 17
 
 ###################
 
 [structure.KL]
 type = "SDL"
-target = 40
+target = 45
 summaryRow = 6
-followUpRow = 27
+followUpRow = 28
 dependencies = ["Honest", "KLT"]
 
 [structure.Honest]
 type = "UL"
-target = 14
-summaryRow = 38
+target = 15
+summaryRow = 39
 dependencies = ["Young_lnw"]
 
 [structure.Young_lnw]
 type = "CL"
-target = 13
-summaryRow = 37
-followUpRow = 22
+target = 14
+summaryRow = 38
+followUpRow = 23
 
 [structure.KLT]
 type = "UL"
-target = 25
-summaryRow = 42
+target = 29
+summaryRow = 43
 dependencies = ["Faithful", "Obey", "Excellent"]
 
 [structure.Faithful]
 type = "CL"
-target = 7
-summaryRow = 39
-followUpRow = 23
+target = 8
+summaryRow = 40
+followUpRow = 24
 
 [structure.Obey]
 type = "CL"
 target = 7
-summaryRow = 40
-followUpRow = 24
+summaryRow = 41
+followUpRow = 25
 
 [structure.Excellent]
 type = "CL"
-target = 10
-summaryRow = 41
-followUpRow = 25
+target = 13
+summaryRow = 42
+followUpRow = 26
 
 ###################
 
 [structure.KN]
 type = "SDL"
-target = 50
+target = 64
 summaryRow = 7
-followUpRow = 38
+followUpRow = 39
 dependencies = ["Mighty", "Navigator"]
 
 [structure.Mighty]
 type = "UL"
-target = 25
-summaryRow = 53
+target = 33
+summaryRow = 54
 dependencies = ["Godfrey", "Amity", "Galaxy"]
 
 [structure.Godfrey]
 type = "CL"
-target = 9
-summaryRow = 50
-followUpRow = 31
-
-[structure.Amity]
-type = "CL"
-target = 7
+target = 12
 summaryRow = 51
 followUpRow = 32
 
-[structure.Galaxy]
+[structure.Amity]
 type = "CL"
 target = 9
 summaryRow = 52
 followUpRow = 33
 
+[structure.Galaxy]
+type = "CL"
+target = 12
+summaryRow = 53
+followUpRow = 34
+
 [structure.Navigator]
 type = "UL"
-target = 24
-summaryRow = 57
+target = 30
+summaryRow = 58
 dependencies = ["Natia", "Esther", "Joshua"]
 
 [structure.Natia]
 type = "CL"
-target = 8
-summaryRow = 54
-followUpRow = 34
-
-[structure.Esther]
-type = "CL"
-target = 7
+target = 9
 summaryRow = 55
 followUpRow = 35
 
-[structure.Joshua]
+[structure.Esther]
 type = "CL"
-target = 9
+target = 8
 summaryRow = 56
 followUpRow = 36
+
+[structure.Joshua]
+type = "CL"
+target = 12
+summaryRow = 57
+followUpRow = 37
 
 
 
